@@ -2,7 +2,7 @@ fun main(args: Array<String>){
     val array = arrayOf(1,3,2,5,8,6,9,4)
 //    printArray(array)
     myVersionBubbleSort(array)
-    printArray(array)
+//    printArray(array)
 }
 
 fun bubbleSort(a: Array<Int>) {
@@ -34,7 +34,7 @@ fun myVersionBubbleSort(a:Array<Int>){
     }
 }
 
-fun printArray(array: Array<Int>){
+fun printArray(array: IntArray){
     println("")
     for(i in array.indices){
         print("${array[i]}, ")
