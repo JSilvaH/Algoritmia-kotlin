@@ -14,3 +14,4 @@ The principal reason to make this repository were
 ## NOTES
 - If anyone wants to make me a correction, feel free to let me know in my email or with a pull request
 - This repository will keep updating as I keep practicing and saving my exercises
+- I used IntellIJ as IDE 
