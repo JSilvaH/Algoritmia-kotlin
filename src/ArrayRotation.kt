@@ -10,7 +10,7 @@ fun main(args: Array<String>){
     *
     * */
     val myArray = arrayOf(1,2,3,4,5,6,7)
-    val rotation = 4    
+    val rotation = 4
 //    println(method1(myArray, rotation, myArray.size))
     println(method2(myArray, rotation, myArray.size))
 }
@@ -37,7 +37,10 @@ fun leftRotateByOne(array: Array<Int>, size:Int){
         array[i] = array[i + 1]
     array[size - 1] = temp
 }
-
-
-
 //////////////////////////////////////////////////////////////////////////////
+fun method(){
+    ///this method is called the juggling method
+}
+
+
+//////
