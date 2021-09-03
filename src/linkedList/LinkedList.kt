@@ -1,12 +1,12 @@
 package linkedList
 
-class LinkedList<T> :Iterable<T> {
+class LinkedList<T> :Iterable<T>, Collection<T>,MutableIterable<T>{
     private var head:Node<T>? = null
     private var tail:Node<T>? = null
-    var size = 0
+    override var size = 0
         private  set
 
-    private fun isEmpty(): Boolean{
+    override  fun isEmpty(): Boolean{
         return size == 0
     }
 
@@ -111,7 +111,21 @@ class LinkedList<T> :Iterable<T> {
         return  result
     }
 
-    override fun iterator(): Iterator<T> {
+    override fun iterator(): MutableIterator<T> {
         return LinkedListIterator(this)
+    }
+
+    override fun contains(element: T): Boolean {
+        for(item in this){
+            if (item == element) return true
+        }
+
+        return false
+    }
+
+    override fun containsAll(elements: Collection<T>): Boolean {
+        for (searched in elements)
+            if (contains(searched)) return false
+        return true
     }
 }
