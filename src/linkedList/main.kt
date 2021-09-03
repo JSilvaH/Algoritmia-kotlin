@@ -17,4 +17,13 @@ fun main(){
     list.removeLast()
     println("List after removed last item $list")
 
+
+
+    /////////
+    val index = 1
+    val node = list.nodeAt(index - 1)!!
+    val removedValue = list.removeAfter(node)
+    println("After removing at index $index: $list")
+    println("The value removed was: $removedValue")
+
 }

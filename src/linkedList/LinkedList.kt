@@ -96,4 +96,17 @@ class LinkedList<T> {
         return  current.value
 
     }
+
+    fun removeAfter(node: Node<T>):T?{
+        val result = node.next?.value
+
+        if(node.next == tail) tail = node
+
+        if(node.next != null)  size--
+
+        //this line update the next value of my node  to the next node of my current next node
+        node.next = node.next?.next
+
+        return  result
+    }
 }
