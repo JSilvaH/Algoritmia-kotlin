@@ -26,4 +26,10 @@ fun main(){
     println("After removing at index $index: $list")
     println("The value removed was: $removedValue")
 
+
+    //use of iterable
+    for(item in list){
+        println(item)
+    }
+
 }
