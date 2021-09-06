@@ -1,35 +1,27 @@
 package linkedList
 
 fun main(){
-    val list = LinkedList<Int>()
-    list.push(3)
-    list.push(2)
-    list.push(1)
+   //proving mutablelist
+    val list: MutableCollection<Int> = LinkedList()
 
-    println("List before inserting : $list")
-    var middleNode = list.nodeAt(1)!!
-    for (i in 1..3){
-        middleNode = list.insert(-1 * i, middleNode)
-    }
-    println("List after inserting: $list")
-    list.pop()
-    println("List after pop $list")
-    list.removeLast()
-    println("List after removed last item $list")
+    list.add(3)
+    list.add(2)
+    list.add(1)
+    println(list)
+    list.remove(1)
+    println(list)
 
+    //retaining elements
+    list.add(1)
+    list.add(5)
+    list.add(4)
+    println(list)
 
+    list.retainAll(listOf(1,2,5))
+    println(list)
 
-    /////////
-    val index = 1
-    val node = list.nodeAt(index - 1)!!
-    val removedValue = list.removeAfter(node)
-    println("After removing at index $index: $list")
-    println("The value removed was: $removedValue")
-
-
-    //use of iterable
-    for(item in list){
-        println(item)
-    }
+    //remove all elements
+    list.removeAll(listOf(1,4))
+    println(list)
 
 }
